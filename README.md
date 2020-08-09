@@ -75,7 +75,13 @@ Seu código deve estar fechado para mudanças (portanto mantendo-se estável) e 
 4. Crie o hábito de minimizar a alteração de código pronto.
 5. _Design pattern: Decorator_
 6. Crie novas, classes. Não modifique as existentes.
+    
+* Código repetido é um risco para o negócio
+* Crie uma camada de serviços para separar as funcionalidades de sua aplicação (Service Layer)
+* O padrão Decorator é utilizado para aplicar o OCP na prática: uma nova classe é criada que apenas decora uma existente
+* Minimize a alteração de código que está pronto (fechado) mas garanta que seu projeto continue estensível (aberto); esse é o terceiro princípio S.O.L.I.D. e é chamado de Open/Closed Principle
 
+    
 Mais referências:
 - Manifesto Ágil - https://agilemanifesto.org/iso/ptbr/manifesto.html
 - Princípio DRY - Andrew Hunt e Dave Thomas livro **Pragmatic Programmer**.
