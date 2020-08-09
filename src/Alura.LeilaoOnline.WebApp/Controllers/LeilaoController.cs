@@ -8,11 +8,11 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
 {
     public class LeilaoController : Controller
     {
-        LeilaoDao _leilaoDao;
+        private readonly ILeilaoDao _leilaoDao;
 
-        public LeilaoController()
+        public LeilaoController(ILeilaoDao leilaoDao)
         {
-            _leilaoDao = new LeilaoDao();
+            _leilaoDao = leilaoDao;
         }
 
         public IActionResult Index()
