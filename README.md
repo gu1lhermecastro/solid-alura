@@ -1,4 +1,4 @@
-# SOLID-Alura
+# SOLID
 SOLID com C#: Princípios da programação orientada a objetos
 
 **S**RP - Classes e métodos devem ter alta coesão;
