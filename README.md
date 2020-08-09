@@ -46,6 +46,8 @@ SOLID com C#: Princípios da programação orientada a objetos
 
 ## Como obter o DIP — Dependency Inversion Principle (Inversão de Dependências)
 
+**Evite acoplamento com implementações, faça referências apenas a  abstrações.**
+
 1. Acoplamento bom: É a dependência de uma classe estável, que dificilmente irá mudar.
 2. Acoplamento ruim: É a dependência de classes que sofrem modificações com maior frequência, podendo quebrar classes que dependem dela.
 
