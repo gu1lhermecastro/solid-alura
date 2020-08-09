@@ -48,8 +48,8 @@ SOLID com C#: Princípios da programação orientada a objetos
 
 1. **Evite acoplamento com implementações, faça referências apenas a  abstrações.**
 
-2 Acoplamento bom: É a dependência de uma classe estável, que dificilmente irá mudar.
-3 Acoplamento ruim: É a dependência de classes que sofrem modificações com maior frequência, podendo quebrar classes que dependem dela.
+2. Acoplamento bom: É a dependência de uma classe estável, que dificilmente irá mudar.
+3. Acoplamento ruim: É a dependência de classes que sofrem modificações com maior frequência, podendo quebrar classes que dependem dela.
 
 4. **Inversão de Dependência**: Melhora a **qualidade da dependência**! Crie abstrações e dependa delas para melhorar a qualidade do acoplamento. Esse hábito é formalizado através do Princípio da Inversão das Dependências (DIP), a letra D na sigla S.O.L.I.D.
 5. **Injeção de Dependência**: Melhora a **criação da dependência**! Explicite as dependências de uma classe. Uma das maneiras de fazer isso é usando parâmetros do construtor. Desse jeito aplicamos um conceito chamado Injeção de Dependência (DI)
@@ -64,6 +64,12 @@ SOLID com C#: Princípios da programação orientada a objetos
 * O que são classes instáveis?
 * Que estratégias utilizo para minimizar os acoplamentos ruins?
 * De que maneira o AspNet Core ajuda a minimizar o acoplamento de nossos controladores e tipos em geral?
+
+## Como obter o OCP — Open-Closed Principle (Princípio do Aberto/Fechado)
+
+1. Código repetido é um risco para o negócio
+2. Extrair casos de uso para cada método específico.
+3. Separe as funcionalidade da aplicação em uma camada de serviço.
 
 Mais referências:
 - Manifesto Ágil - https://agilemanifesto.org/iso/ptbr/manifesto.html
