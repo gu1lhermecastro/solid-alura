@@ -51,9 +51,9 @@ SOLID com C#: Princípios da programação orientada a objetos
 2 Acoplamento bom: É a dependência de uma classe estável, que dificilmente irá mudar.
 3 Acoplamento ruim: É a dependência de classes que sofrem modificações com maior frequência, podendo quebrar classes que dependem dela.
 
-4. **Inversão de Dependência**: Melhora a **qualidade da dependência**, É deixar de depender da implementação, e depender da abstração.
-5. **Injeção de Dependência**: Melhora a **criação da dependência**, É informar no construtor a dependência.
-6. **Inversão de Controle**: Melhora a **direção da dependência**, É quando a classe receptora, perde o conhencimento direto da implementação.
+4. **Inversão de Dependência**: Melhora a **qualidade da dependência**! Crie abstrações e dependa delas para melhorar a qualidade do acoplamento. Esse hábito é formalizado através do Princípio da Inversão das Dependências (DIP), a letra D na sigla S.O.L.I.D.
+5. **Injeção de Dependência**: Melhora a **criação da dependência**! Explicite as dependências de uma classe. Uma das maneiras de fazer isso é usando parâmetros do construtor. Desse jeito aplicamos um conceito chamado Injeção de Dependência (DI)
+6. **Inversão de Controle**: Melhora a **direção da dependência**! Quando a classe dependente deixa de resolver as dependências diretamente e cede esse controle para outrém temos o uso do conceito Inversão de Controle (IoC).
 
 7. Na OOP Sempre que há obrigatoriedade na instância do objeto, passamos pelo construtor.
 8. Uma forma de aplicar a injeção de dependência, é através do Startup da aplicação.
