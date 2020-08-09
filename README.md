@@ -67,9 +67,14 @@ SOLID com C#: Princípios da programação orientada a objetos
 
 ## Como obter o OCP — Open-Closed Principle (Princípio do Aberto/Fechado)
 
+Seu código deve estar fechado para mudanças (portanto mantendo-se estável) e aberto para evolução através dos plugins
+
 1. Código repetido é um risco para o negócio
 2. Extrair casos de uso para cada método específico.
 3. Separe as funcionalidade da aplicação em uma camada de serviço.
+4. Crie o hábito de minimizar a alteração de código pronto.
+5. _Design pattern: Decorator_
+6. Crie novas, classes. Não modifique as existentes.
 
 Mais referências:
 - Manifesto Ágil - https://agilemanifesto.org/iso/ptbr/manifesto.html
