@@ -22,14 +22,22 @@ SOLID com C#: Princípios da programação orientada a objetos
 **Code Smells:**
 1. Código repetitivo, CTRL + C e CTRL + V. As ocorrências do mesmo código se tornam recorrentes.
 
-
 **Soluções de dívidas técnicas:**
 1. Patterns:
 2. Princípios básicos:
 3. SOLID:
 
+Como obter o **SRP — Single Responsibility Principle (Princípio da Responsabilidade Única)**
+1. DRY - Dont Repeat Yourself
+2. Métodos devem ter uma única responsabilidade
+3. Classes também dem ter uma única responsabilidade
+4. Responsabilidade do Método ≠ Responsabilidade da Classe: Um classe pode ter vários métodos, desde que sejam referentes a sua regra.
+5. Garantir o Single Source of Truth - Única fonte de informação
+
+
 Mais referências:
 - Manifesto Ágil - https://agilemanifesto.org/iso/ptbr/manifesto.html
+- Princípio DRY - Andrew Hunt e Dave Thomas livro **Pragmatic Programmer**.
 
 Mais sobre Code Smells:
 - https://refactoring.guru/refactoring/smells
