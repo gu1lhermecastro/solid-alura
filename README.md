@@ -81,7 +81,14 @@ Seu código deve estar fechado para mudanças (portanto mantendo-se estável) e 
 * O padrão Decorator é utilizado para aplicar o OCP na prática: uma nova classe é criada que apenas decora uma existente
 * Minimize a alteração de código que está pronto (fechado) mas garanta que seu projeto continue estensível (aberto); esse é o terceiro princípio S.O.L.I.D. e é chamado de Open/Closed Principle
 
-    
+## LSP — Liskov Substitution Principle (Segregação de Interfaces e Liskov)
+
+1. Cumpra as promessas das abstrações, evite **NotImplementation()**
+2. YAGNI - You Aint Gonna Need Id!
+3. Procupe-se com a coesão e acoplamento das interfaces
+4. Aplicando um pouco de CQRS, utilizando interface de leitura e interface de query.
+
+
 Mais referências:
 - Manifesto Ágil - https://agilemanifesto.org/iso/ptbr/manifesto.html
 - Princípio DRY - Andrew Hunt e Dave Thomas livro **Pragmatic Programmer**.
