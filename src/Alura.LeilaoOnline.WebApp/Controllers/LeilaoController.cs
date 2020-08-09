@@ -9,22 +9,24 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
     public class LeilaoController : Controller
     {
         private readonly ILeilaoDao _leilaoDao;
+        private readonly ICategoriaDao _categoriaDao;
 
-        public LeilaoController(ILeilaoDao leilaoDao)
+        public LeilaoController(ILeilaoDao leilaoDao, ICategoriaDao categoriaDao)
         {
             _leilaoDao = leilaoDao;
+            _categoriaDao = categoriaDao;
         }
 
         public IActionResult Index()
         {
-            var leiloes = _leilaoDao.BuscarLeiloes();
+            var leiloes = _leilaoDao.BuscarTodos();
             return View(leiloes);
         } 
 
         [HttpGet]
         public IActionResult Insert()
         {
-            ViewData["Categorias"] = _leilaoDao.BuscarCategorias();
+            ViewData["Categorias"] = _categoriaDao.BuscarTodos();
             ViewData["Operacao"] = "Inclusão";
             return View("Form");
         }
@@ -37,7 +39,7 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
                 _leilaoDao.Incluir(model);
                 return RedirectToAction("Index");
             }
-            ViewData["Categorias"] = _leilaoDao.BuscarCategorias();
+            ViewData["Categorias"] = _leilaoDao.BuscarTodos();
             ViewData["Operacao"] = "Inclusão";
             return View("Form", model);
         }
@@ -45,7 +47,7 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            ViewData["Categorias"] = _leilaoDao.BuscarCategorias();
+            ViewData["Categorias"] = _leilaoDao.BuscarTodos();
             ViewData["Operacao"] = "Edição";
             var leilao = _leilaoDao.BuscarPorId(id);
             if (leilao == null) return NotFound();
@@ -60,7 +62,7 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
                 _leilaoDao.Alterar(model);
                 return RedirectToAction("Index");
             }
-            ViewData["Categorias"] = _leilaoDao.BuscarCategorias();
+            ViewData["Categorias"] = _leilaoDao.BuscarTodos();
             ViewData["Operacao"] = "Edição";
             return View("Form", model);
         }
@@ -103,7 +105,7 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
         public IActionResult Pesquisa(string termo)
         {
             ViewData["termo"] = termo;
-            var leiloes = _leilaoDao.BuscarLeiloes()
+            var leiloes = _leilaoDao.BuscarTodos()
                 .Where(l => string.IsNullOrWhiteSpace(termo) || 
                     l.Titulo.ToUpper().Contains(termo.ToUpper()) || 
                     l.Descricao.ToUpper().Contains(termo.ToUpper()) ||
