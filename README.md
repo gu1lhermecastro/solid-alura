@@ -1,6 +1,12 @@
 # SOLID-Alura
 SOLID com C#: Princípios da programação orientada a objetos
 
+**S**RP - Classes e métodos devem ter alta coesão;
+**O**CP - Mantenha seu projeto aberto a mudanças mas fechado a alterações;
+**L**SP - Cumpra as promessas definidas nas abstrações;
+**I**SP - Preocupe-se com coesão e acoplamento em suas interfaces;
+**D**IP - Dependa de abstrações ao invés de classes concretas
+
 * Entender porque você precisa ficar atento à **qualidade de seu código.**
 * Conhecer os princípios **S.O.L.I.D.** para ajudar a aumentar sua qualidade (e descobrir porque coloquei ponto entre cada letra).
 * Estudar como a **separação de responsabilidades** aumenta a coesão de seus métodos e classes.
