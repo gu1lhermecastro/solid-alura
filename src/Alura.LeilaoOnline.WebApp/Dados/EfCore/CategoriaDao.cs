@@ -13,27 +13,12 @@ namespace Alura.LeilaoOnline.WebApp.Dados.EfCore
             _context = context;
         }
 
-        public void Alterar(Categoria obj)
-        {
-            throw new NotImplementedException();
-        }
-
         public Categoria BuscarPorId(int id)
         {
             throw new NotImplementedException();
         }
 
         public IEnumerable<Categoria> BuscarTodos()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Excluir(Categoria obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Incluir(Categoria obj)
         {
             throw new NotImplementedException();
         }

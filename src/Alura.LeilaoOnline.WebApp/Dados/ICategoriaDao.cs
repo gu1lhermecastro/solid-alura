@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Alura.LeilaoOnline.WebApp.Dados
 {
-    public interface ICategoriaDao : IDao<Categoria>
+    public interface ICategoriaDao : ICommand<Categoria>
     {
     }
 }
