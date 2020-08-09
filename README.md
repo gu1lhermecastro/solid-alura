@@ -46,8 +46,8 @@ SOLID com C#: Princípios da programação orientada a objetos
 
 ## Como obter o DIP — Dependency Inversion Principle (Inversão de Dependências)
 
-Acoplamento bom: É a dependência de uma classe estável, que dificilmente irá mudar.
-Acoplamento ruim: É a dependência de classes que sofrem modificações com maior frequência, podendo quebrar classes que dependem dela.
+1. Acoplamento bom: É a dependência de uma classe estável, que dificilmente irá mudar.
+2. Acoplamento ruim: É a dependência de classes que sofrem modificações com maior frequência, podendo quebrar classes que dependem dela.
 
 * Como analiso as dependências de uma classe?
 * Qual a diferença entre acoplamento bom e ruim?
