@@ -1,7 +1,7 @@
+using Alura.LeilaoOnline.WebApp.Dados.EfCore;
+using Alura.LeilaoOnline.WebApp.Models;
 using System;
 using System.Collections.Generic;
-using Alura.LeilaoOnline.WebApp.Models;
-using Alura.LeilaoOnline.WebApp.Dados;
 
 namespace Alura.LeilaoOnline.WebApp.Seeding
 {

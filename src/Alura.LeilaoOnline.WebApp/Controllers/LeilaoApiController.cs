@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Alura.LeilaoOnline.WebApp.Dados;
 using Alura.LeilaoOnline.WebApp.Models;
-using Alura.LeilaoOnline.WebApp.Dados;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Alura.LeilaoOnline.WebApp.Controllers
 {
@@ -9,25 +8,24 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
     [Route("/api/leiloes")]
     public class LeilaoApiController : ControllerBase
     {
-        AppDbContext _context;
+        private readonly ILeilaoDao _leilaoDao;
 
-        public LeilaoApiController()
+        public LeilaoApiController(ILeilaoDao leilaoDao)
         {
-            _context = new AppDbContext();
+            _leilaoDao = leilaoDao;
         }
 
         [HttpGet]
         public IActionResult EndpointGetLeiloes()
         {
-            var leiloes = _context.Leiloes
-                .Include(l => l.Categoria);
+            var leiloes = _leilaoDao.BuscarTodos();
             return Ok(leiloes);
         }
 
         [HttpGet("{id}")]
         public IActionResult EndpointGetLeilaoById(int id)
         {
-            var leilao = _context.Leiloes.Find(id);
+            var leilao = _leilaoDao.BuscarPorId(id);
             if (leilao == null)
             {
                 return NotFound();
@@ -38,29 +36,26 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
         [HttpPost]
         public IActionResult EndpointPostLeilao(Leilao leilao)
         {
-            _context.Leiloes.Add(leilao);
-            _context.SaveChanges();
+            _leilaoDao.Incluir(leilao);
             return Ok(leilao);
         }
 
         [HttpPut]
         public IActionResult EndpointPutLeilao(Leilao leilao)
         {
-            _context.Leiloes.Update(leilao);
-            _context.SaveChanges();
+            _leilaoDao.Alterar(leilao);
             return Ok(leilao);
         }
 
         [HttpDelete("{id}")]
         public IActionResult EndpointDeleteLeilao(int id)
         {
-            var leilao = _context.Leiloes.Find(id);
+            var leilao = _leilaoDao.BuscarPorId(id);
             if (leilao == null)
             {
                 return NotFound();
             }
-            _context.Leiloes.Remove(leilao);
-            _context.SaveChanges();
+            _leilaoDao.Excluir(leilao);
             return NoContent();
         }
 
