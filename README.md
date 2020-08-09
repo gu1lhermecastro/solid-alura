@@ -8,18 +8,8 @@ SOLID com C#: Princípios da programação orientada a objetos
 * Introduzir o hábito de manter a **estabilidade de suas classes** para garantir a flexibilidade de sua aplicação.
 * Reforçar que **promessas feitas nas abstrações devem ser cumpridas.**
 * Lembrar que **interfaces também podem perder coesão e ter alto acoplamento.**
-* Por que evitar código duplicado?
-* O que devo fazer quando encontro código repetido em meu projeto?
-* Qual a diferença entre responsabilidade de método e responsabilidade de classes?
-* Qual o propósito do padrão DAO?
-* Qual o princípio S.O.L.I.D. relacionado à coesão?
-* Código repetido é uma forma específica de conhecimento repetido (DRY)
-* Repetição de código é ruim porque impacta nos custos de manutenção e aumenta sua dívida técnica
-* Repetição de código pode indicar que métodos e classes possuem muitas responsabilidades
-* Métodos e classes devem ter 1 única responsabilidade! Só assim serão coesos
-* A responsabilidade de um método é executar uma única função
-* A responsabilidade de uma classe é responder a mudanças originadas por uma única pessoa, função ou área de negócio (agente de mudança)
-* Essas idéias foram sintetizadas no Princípio da Responsabilidade Única (SRP) cunhado por Robert Martin
+
+
 
 **Código de Qualidade?**
 É um código flexível, pronto para mudanças!
@@ -34,13 +24,34 @@ SOLID com C#: Princípios da programação orientada a objetos
 2. Princípios básicos:
 3. SOLID:
 
-Como obter o **SRP — Single Responsibility Principle (Princípio da Responsabilidade Única)**
+## Como obter o SRP — Single Responsibility Principle (Princípio da Responsabilidade Única)
 1. DRY - Dont Repeat Yourself
 2. Métodos devem ter uma única responsabilidade
-3. Classes também dem ter uma única responsabilidade
+3. Classes também devem ter uma única responsabilidade
 4. Responsabilidade do Método ≠ Responsabilidade da Classe: Um classe pode ter vários métodos, desde que sejam referentes a sua regra.
 5. Garantir o Single Source of Truth - Única fonte de informação
 
+* Por que evitar código duplicado?
+* O que devo fazer quando encontro código repetido em meu projeto?
+* Qual a diferença entre responsabilidade de método e responsabilidade de classes?
+* Qual o propósito do padrão DAO?
+* Qual o princípio S.O.L.I.D. relacionado à coesão?
+* Código repetido é uma forma específica de conhecimento repetido (DRY)
+* Repetição de código é ruim porque impacta nos custos de manutenção e aumenta sua dívida técnica
+* Repetição de código pode indicar que métodos e classes possuem muitas responsabilidades
+* Métodos e classes devem ter 1 única responsabilidade! Só assim serão coesos
+* A responsabilidade de um método é executar uma única função
+* A responsabilidade de uma classe é responder a mudanças originadas por uma única pessoa, função ou área de negócio (agente de mudança)
+* Essas idéias foram sintetizadas no Princípio da Responsabilidade Única (SRP) cunhado por Robert Martin
+
+## Como obter o DIP — Dependency Inversion Principle (Inversão de Dependências)
+
+
+* Como analiso as dependências de uma classe?
+* Qual a diferença entre acoplamento bom e ruim?
+* O que são classes instáveis?
+* Que estratégias utilizo para minimizar os acoplamentos ruins?
+* De que maneira o AspNet Core ajuda a minimizar o acoplamento de nossos controladores e tipos em geral?
 
 Mais referências:
 - Manifesto Ágil - https://agilemanifesto.org/iso/ptbr/manifesto.html
